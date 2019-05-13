@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
+var bodyParser = require('body-parser')
 
 app.get("/", (req, res) => res.send("Hello World"));
-
+app.use(bodyParser.json());
 app.listen(5000, () => console.log('Server is running on port 5000'));
